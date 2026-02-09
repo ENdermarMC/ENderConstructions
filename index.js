@@ -13,12 +13,12 @@ box_search=document.getElementById("boxSearch");
 
 // Datos de construcciones para el buscador
 const construcciones = [
-    { title: "Ciudadela de Cristal", slug: "ciudadela-de-cristal" },
-    { title: "Puente del Norte", slug: "puente-del-norte" },
-    { title: "Torre Obsidiana", slug: "torre-obsidiana" },
-    { title: "Jardin Astral", slug: "jardin-astral" },
-    { title: "Puerto de Luz", slug: "puerto-de-luz" },
-    { title: "Templo del Mar", slug: "templo-del-mar" },
+    { title: "Ciudadela de Cristal", slug: "./ciudadela-de-cristal" },
+    { title: "Puente del Norte", slug: "./puente-del-norte" },
+    { title: "Torre Obsidiana", slug: "./torre-obsidiana" },
+    { title: "Jardin Astral", slug: "./jardin-astral" },
+    { title: "Puerto de Luz", slug: "./puerto-de-luz" },
+    { title: "Templo del Mar", slug: "./templo-del-mar" },
 ];
 
 const inConstrucciones = window.location.pathname.includes("/construcciones/");
