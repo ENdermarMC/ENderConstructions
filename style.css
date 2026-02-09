@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: "Nerko One", cursive;
+    font-family: "Plus Jakarta Sans", sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 18px;
@@ -39,8 +39,7 @@ img {
 }
 
  
- .fuente {
-     font-family: "Playpen Sans", cursive;
+ 
  }
 .logo {
     font-family: "Playpen Sans", cursive;
@@ -794,5 +793,6 @@ header .imagen-logo:hover {
     }
 
 }
+
 
 
