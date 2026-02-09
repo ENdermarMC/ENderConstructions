@@ -41,10 +41,13 @@ img {
  
  
  }
-.logo {
+.logo  {
     font-family: "Playpen Sans", cursive;
     flex: 1 1 auto;
     text-align: center;
+}
+.navegation .logo h1{
+	font-family: "Playpen Sans", cursive;
 }
  
  
@@ -793,6 +796,7 @@ header .imagen-logo:hover {
     }
 
 }
+
 
 
 
