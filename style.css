@@ -46,10 +46,10 @@ img {
     flex: 1 1 auto;
     text-align: center;
 }
-.navegacion .logo {
-	font-family: "Playpen Sans", cursive;
+.navegacion h1.logo {
+  font-family: "Playpen Sans", cursive !important;
 }
- 
+
  
 .navegacion {
     display: flex;
@@ -796,6 +796,7 @@ header .imagen-logo:hover {
     }
 
 }
+
 
 
 
