@@ -1,0 +1,798 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Nerko One", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    margin: 0;
+    min-height: 100vh;
+    
+  }
+
+body::before {
+    content: "";
+    display: block;
+    height: 96px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+  body a {
+    text-decoration: none;
+    /* 1. Crea el degradado como un fondo */
+    background: linear-gradient(to right, blue, cyan);
+
+    /* 2. Recorta el fondo para que solo sea visible en el texto */
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    /* 3. Haz que el color del texto sea transparente para que se vea el fondo */
+    color: transparent;
+}
+
+ 
+ .fuente {
+     font-family: "Playpen Sans", cursive;
+ }
+.logo {
+    font-family: "Playpen Sans", cursive;
+    flex: 1 1 auto;
+    text-align: center;
+}
+ 
+ 
+.navegacion {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+    padding: 12px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    border-radius: 100px;
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    transition: top 0.25s ease, box-shadow 0.25s ease;
+    /* APLICA ESTA LÍNEA PARA LA SOMBRA DEBAJO DEL HEADER */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); /* Sombra hacia abajo */
+}
+ 
+ 
+.navegacion h1 {
+    /* 1. Crea el degradado como un fondo */
+    background: linear-gradient(to right, blue, cyan);
+
+    /* 2. Recorta el fondo para que solo sea visible en el texto */
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    /* 3. Haz que el color del texto sea transparente para que se vea el fondo */
+    color: transparent;
+
+    /* Tus otras propiedades están bien */
+    margin: 0;
+    font-size: clamp(28px, 4.5vw, 56px);
+    cursor: pointer;
+    transition: all 0.5s;
+}
+ 
+ 
+header .logo:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: all 0.5s;
+}
+ 
+#ctn-menu-icon,
+#ctn-icon-search{
+    display: flex;
+    align-items: center;
+}
+
+
+
+.construcciones {
+    margin: 40px auto 20px;
+    padding: 24px;
+    width: min(92vw, 1100px);
+    text-align: center;
+    border-radius: 32px;
+    background: linear-gradient(to right, rgba(15, 32, 39, 0.3), rgba(32, 58, 67, 0.3), rgba(44, 83, 100, 0.3));
+    box-shadow: 0 0 25px rgba(173, 216, 230, 0.45);
+}
+
+.construcciones h2 {
+    font-size: clamp(24px, 3.8vw, 36px);
+    margin: 0 0 16px;
+}
+
+.construcciones-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+}
+
+.construccion-card {
+    display: block;
+    text-decoration: none;
+    border-radius: 18px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.06);
+    box-shadow: 0 0 18px rgba(173, 216, 230, 0.35);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.construccion-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 26px rgba(173, 216, 230, 0.55);
+}
+
+.construccion-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    display: block;
+}
+
+.construccion-info {
+    padding: 12px 14px 16px;
+    text-align: left;
+}
+
+.construccion-info h3 {
+    margin: 0 0 6px;
+    font-size: clamp(18px, 2.4vw, 22px);
+    color: #d7dde3;
+}
+
+.construccion-info p {
+    margin: 0;
+    color: #c7cdd3;
+    font-size: clamp(14px, 2vw, 16px);
+}
+
+.noticias {
+    margin: 32px auto 20px;
+    padding: 24px;
+    width: min(92vw, 1100px);
+    text-align: center;
+    border-radius: 32px;
+    background: linear-gradient(to right, rgba(15, 32, 39, 0.25), rgba(32, 58, 67, 0.25), rgba(44, 83, 100, 0.25));
+    box-shadow: 0 0 22px rgba(173, 216, 230, 0.35);
+}
+
+.noticias h2 {
+    margin: 0 0 16px;
+    font-size: clamp(24px, 3.6vw, 34px);
+}
+
+.noticias-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 18px;
+    text-align: left;
+}
+
+.noticia-card {
+    padding: 16px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.06);
+    box-shadow: 0 0 18px rgba(173, 216, 230, 0.35);
+}
+
+.noticia-card h3 {
+    margin: 0 0 8px;
+    font-size: clamp(18px, 2.6vw, 22px);
+    color: #d7dde3;
+}
+
+.noticia-card p {
+    margin: 6px 0;
+    color: #c7cdd3;
+    font-size: clamp(14px, 2vw, 16px);
+}
+
+.noticia-fecha {
+    opacity: 0.85;
+}
+
+.construccion-detalle {
+    margin: 40px auto 80px;
+    width: min(92vw, 1000px);
+    padding: 24px;
+    border-radius: 28px;
+    background: linear-gradient(to right, rgba(15, 32, 39, 0.3), rgba(32, 58, 67, 0.3), rgba(44, 83, 100, 0.3));
+    box-shadow: 0 0 25px rgba(173, 216, 230, 0.45);
+    display: grid;
+    gap: 20px;
+}
+
+.construccion-hero {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+}
+
+.construccion-hero img {
+    width: 100%;
+    height: 100%;
+    border-radius: 18px;
+    display: block;
+    object-fit: cover;
+}
+
+.construccion-contenido h2 {
+    margin: 0 0 10px;
+    font-size: clamp(24px, 3.6vw, 36px);
+    color: #d7dde3;
+}
+
+.construccion-contenido p {
+    margin: 8px 0;
+    color: #c7cdd3;
+    font-size: clamp(15px, 2.2vw, 18px);
+}
+
+.recomendadas {
+    margin: 30px auto 10px;
+    width: min(92vw, 1100px);
+    text-align: left;
+}
+
+.recomendadas h2 {
+    margin: 0 0 12px;
+    font-size: clamp(20px, 3vw, 28px);
+    color: #d7dde3;
+}
+
+.recomendadas-row {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(180px, 1fr);
+    gap: 16px;
+    overflow-x: auto;
+    padding-bottom: 8px;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+}
+
+.recomendadas-row::-webkit-scrollbar {
+    display: none;
+}
+
+.recomendadas-wrap {
+    position: relative;
+    display: grid;
+    align-items: center;
+}
+
+.recomendadas-wrap .recomendadas-row {
+    padding: 8px 28px 8px;
+}
+
+.recomendadas-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(15, 32, 39, 0.7);
+    color: #d7dde3;
+    box-shadow: 0 0 16px rgba(173, 216, 230, 0.35);
+    cursor: pointer;
+    font-size: 22px;
+    line-height: 1;
+}
+
+.recomendadas-btn[data-dir="left"] {
+    left: -12px;
+}
+
+.recomendadas-btn[data-dir="right"] {
+    right: -12px;
+}
+
+.recomendadas-btn:hover {
+    transform: translateY(-50%) scale(1.08);
+}
+
+.recomendada-item {
+    display: grid;
+    gap: 8px;
+    text-decoration: none;
+    color: #c7cdd3;
+    scroll-snap-align: start;
+    border-radius: 16px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.06);
+    box-shadow: 0 0 16px rgba(173, 216, 230, 0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.recomendada-item img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    display: block;
+}
+
+.recomendada-item span {
+    padding: 0 10px 12px;
+    font-size: clamp(14px, 2vw, 16px);
+}
+
+.recomendada-item:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 22px rgba(173, 216, 230, 0.45);
+}
+
+.btn-descarga {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 10px 16px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 16px rgba(173, 216, 230, 0.35);
+    color: #d7dde3;
+    text-decoration: none;
+}
+
+.btn-descarga:hover {
+    transform: scale(1.03);
+    transition: transform 0.2s ease;
+}
+
+.volver {
+    margin-top: 16px;
+}
+
+.contacto {
+    text-align: center;
+    margin: 40px auto 80px;
+    padding: 24px;
+    width: min(92vw, 900px);
+    border-radius: 24px;
+    background: linear-gradient(to right, rgba(15, 32, 39, 0.35), rgba(32, 58, 67, 0.35), rgba(44, 83, 100, 0.35));
+    box-shadow: 0 0 25px rgba(173, 216, 230, 0.5);
+}
+
+.contacto p {
+    margin: 12px 0;
+    color: #c7cdd3;
+}
+
+.contacto-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    margin-top: 16px;
+    text-align: left;
+}
+
+.contacto-card {
+    padding: 16px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 0 18px rgba(173, 216, 230, 0.35);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contacto-card h3 {
+    margin: 0 0 8px;
+    font-size: clamp(18px, 2.6vw, 24px);
+    color: #d7dde3;
+}
+
+.contacto-card:hover,
+.contacto a:hover {
+    cursor: pointer;
+}
+
+.contacto-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 24px rgba(173, 216, 230, 0.5);
+}
+
+.contacto-link {
+    font-size: clamp(16px, 2.4vw, 20px);
+    text-decoration: none;
+}
+
+.contacto-cta {
+    grid-column: 1 / -1;
+    text-align: center;
+}
+
+@media (max-width: 700px) {
+    .contacto-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+#ctn-icon-search i {
+    
+height: 30px;
+width: auto;
+
+
+     background: linear-gradient(to left, blue, cyan);
+
+    /* 2. Recorta el fondo para que solo sea visible en el texto */
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    /* 3. Haz que el color del texto sea transparente para que se vea el fondo */
+    color: transparent;
+    font-size: clamp(26px, 3.5vw, 36px);
+
+}
+
+#ctn-icon-search :hover{
+    transform: scale(1.25);
+    transition: all 0.5s;
+    background: linear-gradient(to right, blue, cyan);
+
+    /* 2. Recorta el fondo para que solo sea visible en el texto */
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    /* 3. Haz que el color del texto sea transparente para que se vea el fondo */
+    color: transparent;
+
+    cursor: pointer;
+    
+}
+
+#boxSearch {
+    list-style: none;
+}
+
+
+
+#ctn-bar-search{
+position:fixed; 
+top: -10000px;
+width: 100%;
+
+padding: 20px; 
+z-index:11;
+cursor: pointer;
+transition: all 600ms;
+
+}
+
+#ctn-bar-search input{
+display: block;
+width: min(90vw, 900px);
+margin: auto;
+padding: 10px;
+font-size: 18px;
+outline: 0;
+border-radius: 100px;
+box-shadow: 0 0 30px 5px rgba(173, 216, 230, 0.7);
+color:lightblue;
+
+
+background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    border: none; /* Elimina el borde predeterminado */
+   box-shadow: 0 0 30px 5px rgba(173, 216, 230, 0.7);
+ border-radius: 100px;
+   
+
+}
+
+#boxSearch{
+    position: fixed;
+    top: 165px;
+    width: min(90vw, 800px);
+    left: 50%;
+transform: translateX(-50%);
+     box-shadow: 0 0 30px 5px rgba(173, 216, 230, 0.7);
+    border-radius: 50px;
+    z-index: 8;
+    display: none;
+}
+
+#boxSearch li a {
+    display: block; 
+    width: 100%;
+    background: linear-gradient(to right, lightblue, cyan);
+
+    /* 2. Recorta el fondo para que solo sea visible en el texto */
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    /* 3. Haz que el color del texto sea transparente para que se vea el fondo */
+    color: transparent;
+    padding: 12px 20px;
+    align-content: center;
+    
+    
+
+}
+#boxSearch li a:hover {
+    background-color: #f3f3f3;
+    color: lightblue;
+}
+
+#cover-ctn-search{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 7;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5) ;
+    display: none;
+    transition: all 600ms;
+}
+
+#menu-ctn {
+    position: fixed;
+    top: 70px;
+    left: 20px; 
+    z-index: 10;
+    color: chocolate;
+    cursor: pointer;
+    transition: all 600ms;
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    border-radius: 50px;
+    padding: 10px;
+    height: auto;
+    width: min(90vw, 420px);
+    display: none;
+     box-shadow: 0 0 30px 5px rgba(173, 216, 230, 0.7);
+    
+    
+    
+    
+
+}
+
+#menu-ctn h3{
+    text-align: center;
+    font-size: clamp(28px, 6vw, 54px);
+    background: linear-gradient(to left, blue, cyan);
+
+    /* 2. Recorta el fondo para que solo sea visible en el texto */
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    /* 3. Haz que el color del texto sea transparente para que se vea el fondo */
+    color: transparent;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#menu-ctn li {
+    list-style: none;
+    
+    background: linear-gradient(to left, blue, cyan);
+
+    /* 2. Recorta el fondo para que solo sea visible en el texto */
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    /* 3. Haz que el color del texto sea transparente para que se vea el fondo */
+    color: transparent;
+    border-radius: 16px;
+    
+    transition: all 0.5s;
+    
+
+}
+
+#menu-ctn li:nth-child(3) {
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+    border-bottom: 2px solid rgba(173, 216, 230, 0.6);
+    border-radius: 0;
+}
+
+#menu-ctn li a {
+	cursor: pointer;
+	background: linear-gradient(to right, blue, cyan);
+
+    /* 2. Recorta el fondo para que solo sea visible en el texto */
+    -webkit-background-clip: text;
+    background-clip: text;
+
+	/* 3. Haz que el color del texto sea transparente para que se vea el fondo */
+	color: transparent;
+    font-size: clamp(20px, 3.5vw, 32px);
+}
+
+#menu-ctn i {
+    font-size: clamp(28px, 6vw, 70px);
+    background: linear-gradient(to left, blue, cyan);
+
+    /* 2. Recorta el fondo para que solo sea visible en el texto */
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    /* 3. Haz que el color del texto sea transparente para que se vea el fondo */
+    color: transparent;
+    margin-left: 10px;
+    
+}
+
+.toggle-btn {
+    margin-bottom: 7px;
+    
+    margin-right: 8px;
+    background: linear-gradient(to right, blue, cyan);
+
+    /* 2. Recorta el fondo para que solo sea visible en el texto */
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    /* 3. Haz que el color del texto sea transparente para que se vea el fondo */
+    color: transparent;
+    cursor: pointer;
+    transition: all 0.5s;
+    border: none;
+    cursor: pointer;
+    font-size: clamp(28px, 4vw, 40px);
+    border: none; /* Solo para depuración */
+    z-index: 100; /* Asegúrate de que esté por encima de otros elementos */
+    position: relative;
+  }
+
+ /* Selector y estilos corregidos */
+.toggle-btn:hover {
+    transform: scale(1.5); /* Agranda el botón al pasar el ratón */
+    transition: all 0.5s;
+    background: linear-gradient(to left, blue, cyan);
+    /* 2. Recorta el fondo para que solo sea visible en el texto */
+    -webkit-background-clip: text;
+    background-clip: text;
+    
+}
+  
+
+  #menu-ctn li a:hover{
+    background-color: #f3f3f3;
+    color: lightblue;
+    transform: scale(1.1);
+    transition: all 600ms;
+    border-radius: 50px;
+}
+
+#menu-ctn  i:hover {
+    transform: scale(1.5);
+    transition: all 0.5s;
+    color: lightblue;
+    cursor: pointer;
+}
+
+#ctn-menu-icon #toggle-btn button :hover {
+    transform: scale(1.5);
+    transition: all 0.5s;
+    color: red;
+    cursor: pointer;
+}
+
+
+
+
+
+
+ header .imagen-logo {   
+     height: 72px;
+    width: auto;
+    border-radius: 50%;
+    margin-left: 0;
+}
+
+header .imagen-logo:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    transition: all 0.5s;
+}
+
+
+
+
+
+
+@media (max-width: 900px) {
+    .navegacion {
+        border-radius: 24px;
+    }
+
+    #menu-ctn {
+        top: 90px;
+        left: 12px;
+    }
+
+    #ctn-bar-search {
+        padding: 14px;
+    }
+
+    #boxSearch {
+        top: 140px;
+    }
+
+}
+
+@media (max-width: 600px) {
+    .navegacion {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto;
+        align-items: center;
+        gap: 4px;
+        padding: 6px 10px;
+    }
+
+    .logo {
+        text-align: center;
+        grid-column: 1 / -1;
+        grid-row: 2;
+        font-size: clamp(18px, 5.2vw, 30px);
+    }
+
+    #ctn-menu-icon,
+    #ctn-icon-search {
+        justify-content: center;
+        width: auto;
+    }
+
+    #ctn-menu-icon {
+        grid-column: 1;
+        grid-row: 3;
+        justify-content: flex-start;
+        padding-left: 8px;
+    }
+
+    #ctn-icon-search {
+        grid-column: 2;
+        grid-row: 3;
+        justify-content: flex-end;
+        padding-right: 8px;
+    }
+
+    .navegacion > a {
+        grid-column: 1 / -1;
+        grid-row: 1;
+        justify-self: center;
+    }
+
+    header .imagen-logo {
+        display: block;
+        margin: 0 auto;
+        height: 50px;
+    }
+
+    #ctn-bar-search input {
+        font-size: 14px;
+    }
+
+    #menu-ctn {
+        left: 50%;
+        transform: translateX(-50%);
+        width: min(92vw, 360px);
+    }
+
+    #menu-ctn h3 {
+        font-size: clamp(24px, 8vw, 40px);
+    }
+
+    #menu-ctn li a {
+        font-size: clamp(18px, 6vw, 28px);
+    }
+
+}
+
+

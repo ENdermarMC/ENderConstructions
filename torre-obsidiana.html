@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Torre Obsidiana - ENderConstructions</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100..800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
+
+  <script src="https://kit.fontawesome.com/1a27368ffb.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+  <header class="navegacion">
+    <a href="../index.html"><img class="imagen-logo" src="../ChatGPT Image 3 ago 2025, 11_20_01.png" alt="Logo"></a>
+    <h1 class="logo">ENderConstructions</h1>
+    <div id="ctn-menu-icon">
+      <button class="toggle-btn" id="toggle-btn">☰ </button>
+    </div>
+    <div id="ctn-icon-search">
+      <i class="fa-solid fa-magnifying-glass" id="icon-search"></i>
+    </div>
+  </header>
+
+  <div id="ctn-bar-search">
+    <input type="text" id="inputSearch" placeholder="¿Qué construccion buscas?">
+  </div>
+  <ul id="boxSearch">
+    <li><a href="../index.html#Construcciones"><i class="fa-solid fa-magnifying-glass"></i> Construcciones destacadas</a></li>
+  </ul>
+
+  <div id="cover-ctn-search"></div>
+
+<div id="menu-ctn">
+  <div class="menu">
+    <h3>Menu </h3>
+    <ul>
+      <li><a href="../index.html#Inicio">Inicio</a></li>
+      <li><a href="../index.html#Construcciones">Construcciones chulas</a></li>
+      <li><a href="../index.html#Noticias">Noticias</a></li>
+      <li><a href="#" id="menu-subir">Como subir tus construcciones</a></li>
+      <li><a href="../index.html#Contacto">Contacto</a></li>
+    </ul>
+
+    <i class="btn-icon-close" ></i>
+    <i class="fa-solid fa-xmark" id="ctn-icon-close"></i>
+  </div>
+  </div>
+
+  <section class="construccion-detalle">
+    <div class="construccion-hero">
+      <img src="../imagen-casa-ejemplo.jpeg" alt="Torre Obsidiana">
+    </div>
+    <div class="construccion-contenido">
+      <h2>Torre Obsidiana</h2>
+      <p><strong>Autor:</strong> ENdermarMC</p>
+      <p><strong>Descripcion:</strong> Torre defensiva con niveles y balcones de vigilancia.</p>
+      <a class="btn-descarga" href="#">Descargar schematic (proximamente)</a>
+      <p class="volver"><a href="../index.html#Construcciones">Volver a Construcciones</a></p>
+    </div>
+  </section>
+
+<section class="recomendadas" aria-label="Mas construcciones">
+  <h2>Mas construcciones</h2>
+  <div class="recomendadas-wrap">
+    <button class="recomendadas-btn" data-dir="left" aria-label="Anterior">←</button>
+    <div class="recomendadas-row">
+    <a class="recomendada-item" href="ciudadela-de-cristal.html">
+      <img src="../imagen-casa-ejemplo.jpeg" alt="Ciudadela de Cristal">
+      <span>Ciudadela de Cristal</span>
+    </a>
+    <a class="recomendada-item" href="puente-del-norte.html">
+      <img src="../imagen-casa-ejemplo.jpeg" alt="Puente del Norte">
+      <span>Puente del Norte</span>
+    </a>
+    <a class="recomendada-item" href="torre-obsidiana.html">
+      <img src="../imagen-casa-ejemplo.jpeg" alt="Torre Obsidiana">
+      <span>Torre Obsidiana</span>
+    </a>
+    <a class="recomendada-item" href="jardin-astral.html">
+      <img src="../imagen-casa-ejemplo.jpeg" alt="Jardin Astral">
+      <span>Jardin Astral</span>
+    </a>
+    <a class="recomendada-item" href="puerto-de-luz.html">
+      <img src="../imagen-casa-ejemplo.jpeg" alt="Puerto de Luz">
+      <span>Puerto de Luz</span>
+    </a>
+    <a class="recomendada-item" href="templo-del-mar.html">
+      <img src="../imagen-casa-ejemplo.jpeg" alt="Templo del Mar">
+      <span>Templo del Mar</span>
+    </a>
+  </div>
+    <button class="recomendadas-btn" data-dir="right" aria-label="Siguiente">→</button>
+  </div>
+</section>
+
+<section class="contacto" id="Contacto">
+  <div class="contacto-grid">
+    <div class="contacto-card">
+      <h3>Info</h3>
+      <p>Owner: ENdermarMC</p>
+      <p>Desde 2025</p>
+    </div>
+    <div class="contacto-card">
+      <h3>Contacto</h3>
+      <p>Correo: <a href="mailto:contacto@enderconstructions.com">contacto@enderconstructions.com</a></p>
+      <p>Servidor de Discord: <a href="https://discord.gg/JXtNPZK2mg">Unirse al servidor</a></p>
+    </div>
+    <div class="contacto-card contacto-cta">
+      <h3>Visita nuestra otra pagina web</h3>
+      <p><a href="#" class="contacto-link">Las construcciones de MR. Blue</a></p>
+    </div>
+  </div>
+</section>
+
+  <script src="../index.js?v=1.0"></script>
+  <script src="../index2.js?v=1.0"></script>
+</body>
+</html>
