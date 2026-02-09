@@ -1,15 +1,16 @@
 
 
-//buscador
-//ejecutando funciones
-document.getElementById("icon-search").addEventListener("click", mostrar_buscador );
-document.getElementById("cover-ctn-search").addEventListener("click", ocultar_buscador);
 
-//declarando variables
-bars_search = document.getElementById("ctn-bar-search");
-cover_ctn_search =document.getElementById("cover-ctn-search");
-inputSearch = document.getElementById("inputSearch");
-box_search=document.getElementById("boxSearch");
+
+//buscador
+const iconSearch = document.getElementById("icon-search");
+const coverCtnSearch = document.getElementById("cover-ctn-search");
+const bars_search = document.getElementById("ctn-bar-search");
+const inputSearch = document.getElementById("inputSearch");
+const box_search = document.getElementById("boxSearch");
+
+if (iconSearch) iconSearch.addEventListener("click", mostrar_buscador);
+if (coverCtnSearch) coverCtnSearch.addEventListener("click", ocultar_buscador);
 
 // Datos de construcciones para el buscador
 const construcciones = [
@@ -21,47 +22,53 @@ const construcciones = [
     { title: "Templo del Mar", slug: "templo-del-mar" },
 ];
 
-const inConstrucciones = window.location.pathname.includes("/construcciones/");
-const basePath = inConstrucciones ? "" : "construcciones/";
+const baseDir = window.location.pathname.replace(/[^/]*$/, "");
 
 // Construye el listado del buscador si existe el contenedor
 if (box_search) {
     const items = construcciones.map((c) => {
-        const href = `${basePath}${c.slug}.html`;
+        const href = `${baseDir}${c.slug}.html`;
         return `<li><a href="${href}"><i class="fa-solid fa-magnifying-glass"></i> ${c.title}</a></li>`;
     });
     box_search.innerHTML = items.join("");
+    const searchLinks = box_search.getElementsByTagName("a");
+    for (let i = 0; i < searchLinks.length; i++) {
+        searchLinks[i].addEventListener("click", ocultar_buscador);
+    }
 }
 
 //funciÃ³n para mostrar
 function mostrar_buscador(){
 
-    bars_search.style.top="80px";
-    cover_ctn_search.style.display="block"
+    if (!bars_search || !coverCtnSearch || !inputSearch || !box_search) return;
+    bars_search.style.top = "80px";
+    coverCtnSearch.style.display = "block";
     inputSearch.focus();
-    inputSearch.value = ""; // Borra el contenido del input
-    box_search.style.display = "none"; // Oculta el contenedor de resultados
+    inputSearch.value = "";
+    box_search.style.display = "none";
     // Oculta el contenedor de resultados
 }
 
 
 // FunciÃ³n para cerrar el buscador
 function ocultar_buscador() {
+    if (!bars_search || !coverCtnSearch || !inputSearch || !box_search) return;
     bars_search.style.top = "-10000px";
-    cover_ctn_search.style.display = "none";
-    inputSearch.value = ""; // Borra el contenido del input
-    box_search.style.display = "none"; // Oculta el contenedor de resultados
+    coverCtnSearch.style.display = "none";
+    inputSearch.value = "";
+    box_search.style.display = "none";
 }
 
 
 
 //creando filtrado de busqueda
 
-document.getElementById("inputSearch").addEventListener("keyup", buscador_interno);
+if (inputSearch) inputSearch.addEventListener("keyup", buscador_interno);
 
 // FunciÃ³n para filtrar los resultados de bÃºsqueda
 function buscador_interno() {
     const filter = inputSearch.value.toUpperCase(); // Convierte el texto a mayÃºsculas
+    if (!box_search) return;
     const li = box_search.getElementsByTagName("li");
     let hasResults = false; // Variable para verificar si hay resultados
 
@@ -88,9 +95,4 @@ function buscador_interno() {
 }
 
 // Agregar evento click a cada enlace en los resultados de bÃºsqueda
-const searchLinks = box_search.getElementsByTagName("a");
-for (let i = 0; i < searchLinks.length; i++) {
-    searchLinks[i].addEventListener("click", ocultar_buscador);
-}
-
 // Navegacion fija al hacer scroll (sin logica extra)
