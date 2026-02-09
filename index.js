@@ -1,7 +1,3 @@
-
-
-
-
 //buscador
 const iconSearch = document.getElementById("icon-search");
 const coverCtnSearch = document.getElementById("cover-ctn-search");
@@ -22,35 +18,32 @@ const construcciones = [
     { title: "Templo del Mar", slug: "templo-del-mar" },
 ];
 
-const baseDir = window.location.pathname.replace(/[^/]*$/, "");
-
 // Construye el listado del buscador si existe el contenedor
 if (box_search) {
+    const baseDir = window.location.pathname.replace(/[^/]*$/, "");
     const items = construcciones.map((c) => {
         const href = `${baseDir}${c.slug}.html`;
         return `<li><a href="${href}"><i class="fa-solid fa-magnifying-glass"></i> ${c.title}</a></li>`;
     });
     box_search.innerHTML = items.join("");
+
     const searchLinks = box_search.getElementsByTagName("a");
     for (let i = 0; i < searchLinks.length; i++) {
         searchLinks[i].addEventListener("click", ocultar_buscador);
     }
 }
 
-//funciÃ³n para mostrar
+//función para mostrar
 function mostrar_buscador(){
-
     if (!bars_search || !coverCtnSearch || !inputSearch || !box_search) return;
     bars_search.style.top = "80px";
     coverCtnSearch.style.display = "block";
     inputSearch.focus();
     inputSearch.value = "";
     box_search.style.display = "none";
-    // Oculta el contenedor de resultados
 }
 
-
-// FunciÃ³n para cerrar el buscador
+// Función para cerrar el buscador
 function ocultar_buscador() {
     if (!bars_search || !coverCtnSearch || !inputSearch || !box_search) return;
     bars_search.style.top = "-10000px";
@@ -59,16 +52,13 @@ function ocultar_buscador() {
     box_search.style.display = "none";
 }
 
-
-
 //creando filtrado de busqueda
-
 if (inputSearch) inputSearch.addEventListener("keyup", buscador_interno);
 
-// FunciÃ³n para filtrar los resultados de bÃºsqueda
+// Función para filtrar los resultados de búsqueda
 function buscador_interno() {
-    const filter = inputSearch.value.toUpperCase(); // Convierte el texto a mayÃºsculas
     if (!box_search) return;
+    const filter = inputSearch.value.toUpperCase(); // Convierte el texto a mayúsculas
     const li = box_search.getElementsByTagName("li");
     let hasResults = false; // Variable para verificar si hay resultados
 
@@ -86,13 +76,10 @@ function buscador_interno() {
         }
     }
 
-    // Muestra u oculta el contenedor de resultados segÃºn el filtro
+    // Muestra u oculta el contenedor de resultados según el filtro
     if (filter === "" || !hasResults) {
-        box_search.style.display = "none"; // Oculta si no hay resultados o el input estÃ¡ vacÃ­o
+        box_search.style.display = "none"; // Oculta si no hay resultados o el input está vacío
     } else {
         box_search.style.display = "block"; // Muestra si hay resultados
     }
 }
-
-// Agregar evento click a cada enlace en los resultados de bÃºsqueda
-// Navegacion fija al hacer scroll (sin logica extra)
