@@ -14,7 +14,7 @@ const construcciones = [
     { title: "Puente del Norte", slug: "puente-del-norte" },
     { title: "Torre Obsidiana", slug: "torre-obsidiana" },
     { title: "Jardin Astral", slug: "jardin-astral" },
-    { title: "Puerto de Luz", slug: "puerto-de-luz" },
+    { title: "La casa morada", slug: "puerto-de-luz" },
     { title: "Templo del Mar", slug: "templo-del-mar" },
 ];
 
